@@ -1,9 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-#MainMenu {
-  visibility: hidden;
-}
 
 # Predefined mappings for h4cd and h4nm
 df_dict = pd.read_csv('test_class.csv')
