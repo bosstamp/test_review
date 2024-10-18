@@ -2,13 +2,9 @@ import pandas as pd
 import streamlit as st
 
 # Predefined mappings for h4cd and h4nm
-h4cd_to_h4nm = {
-    "XK01001001": "ประตู PVC บานทึบ",
-    "XN01002001": "เครื่องตบดิน",
-    "XM04006002": "ข้อต่อ/เข็มขัดรัดสายยาง",
-    "XD02003002": "แผ่นยิปซั่มตัดพิมพ์ลาย",
-    "XE01001014": "เซรามิคปูผนัง ภาพชุด"
-}
+df_dict = pd.read_csv('test_class.csv')
+h4cd_to_h4nm = dict(zip(df_dict['HRCHY4_CD'], df_dict['HRCHY4_NM']))
+
 
 combined_options = [f"{key} - {value}" for key, value in h4cd_to_h4nm.items()]
 # Reverse the dictionary for the reverse mapping
