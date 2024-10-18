@@ -1,19 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Predefined mappings for h4cd and h4nm
 df_dict = pd.read_csv('test_class.csv')
 h4cd_to_h4nm = dict(zip(df_dict['HRCHY4_CD'], df_dict['HRCHY4_NM']))
